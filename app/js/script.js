@@ -1,0 +1,1 @@
+console.log('ARPMtask index file');
