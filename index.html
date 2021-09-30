@@ -2,18 +2,157 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <!-- Google fonts -->
     <link rel="stylesheet" as="style" onload="this.rel = 'stylesheet'" href="https://fonts.googleapis.com/css?family=Raleway:300,500,700|Source+Sans+Pro:400,700&amp;display=swap">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- Load styles -->
+    <link rel="stylesheet" href="css/styles.css">
     <!-- Page icon - favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/arpm.png" />
     <!-- Page title -->
     <title>ARPM</title>
-    <!-- Load styles -->
-    <link rel="stylesheet" href="/dist/style.css">
-    <!-- Load scripts -->
-    <script defer src="/dist/script.js"></script>
 </head>
 <body>
-    Hello hi welcome
+    <div class="container-fluid arpm-content-container">
+        <!-- TOC & Search -->
+        <div class="row arpm-TOC-n-search-container">
+            <!-- Card buttons TOC & Search -->
+            <div class="row arpm-TOC-n-Search-buttons-container">
+                <div class="arpm-TOC-button arpm-active">TOC</div>
+                <div class="arpm-Search-button">Search <i class="fas fa-search"></i></div>
+            </div>
+
+            <!-- TOC -->
+            <div class="row arpm-TOC-container">
+                <div class="arpm-TOC-content">
+                    <ul class="arpm-TOC-list">
+                        <li><a href="#">Overview</a></li>
+                        <li><a href="#">Video lectures</a></li>
+                        <li><a href="#">Theory</a>
+                            <ul class="">
+                                <li class="arpm-open"><a href="#">Introduction</a>
+                                    <ul class="">
+                                        <li class="arpm-open"><a href="#">I. The "Checklist"</a>
+                                            <ul class="">
+                                                <li class=""><a href="#">1 Risk drivers identification</a></li>
+                                                <li class="arpm-open"><a href="#">2 Quest for invariance</a>
+                                                    <ul class="">
+                                                        <li class="arpm-closed"><a href="#">1.1 Efficiency</a></li>
+                                                        <li class=""><a href="#">1.2 Mean-reversion</a></li>
+                                                        <li class="arpm-closed"><a href="#">1.3 Long memmory</a></li>
+                                                    </ul>
+                                                </li>
+
+                                                <li class="arpm-closed"><a href="#">3 Estimation</a></li>
+                                                <li class="arpm-closed"><a href="#">4 Projection</a></li>
+                                                <li class=""><a href="#">5 Pricing at the horizon</a></li>
+                                                <li class=""><a href="#">6 Aggregation</a></li>
+                                                <li class=""><a href="#">7 Ex-ante evaluation</a></li>
+                                                <li class=""><a href="#">8 Ex-ante attribution</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Search -->
+            <div class="row arpm-search-container arpm-close">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="row arpm-main-content-container">
+            <!-- Summary -->
+            <div class="row arpm-summary">
+                <!-- Theory -->
+                <div class="arpm-theory-container arpm-summary-item-container">
+                    <span class="arpm-theory">Theory</span>
+                    <div class="progress">
+                        <div class="progress-bar arpm-progress-bar" role="progressbar" style="width: 45%;" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>18m</span>
+                </div>
+
+                <!-- Slides -->
+                <div class="arpm-slides-container arpm-summary-item-container">
+                    <span class="arpm-slides">Slides</span>
+                    <div class="progress">
+                        <div class="progress-bar arpm-progress-bar" role="progressbar" style="width: 25%;" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>8m</span>
+                </div>
+
+                <!-- Video Marathon -->
+                <div class="arpm-videomarathon-container arpm-summary-item-container">
+                    <span class="arpm-videomarathon">Video Marathon</span>
+                    <div class="progress">
+                        <div class="progress-bar arpm-progress-bar" role="progressbar" style="width: 95%;" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>31m</span>
+                </div>
+
+                <!-- Video Bootcamp -->
+                <div class="arpm-videobootcamp-container arpm-summary-item-container">
+                    <span class="arpm-videobootcamp">Video Bootcamp</span>
+                    <div class="progress">
+                        <div class="progress-bar arpm-progress-bar" role="progressbar" style="width: 55%;" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>18m</span>
+                </div>
+
+                <!-- Doc/Code -->
+                <div class="arpm-doccode-container arpm-summary-item-container">
+                    <span class="arpm-doccode">Doc/Code</span>
+                    <div class="progress">
+                        <div class="progress-bar arpm-progress-bar" role="progressbar" style="width: 5%;" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>12m</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <h1>2.8 Cointegration</h1>
+            </div>
+
+            <!-- Topic buttons -->
+            <div class="row arpm-topic-buttons-container">
+                <div class="arpm-theory-card-button arpm-active">Theory</div>
+                <div class="arpm-slides-card-button">Slides</div>
+                <div class="arpm-videomarathon-card-button">Video Marathon</div>
+            </div>
+
+            <!-- Article -->
+            <div class="row arpm-article">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Website scripts -->
+    <script src="js/script.js"></script>
 </body>
 </html>

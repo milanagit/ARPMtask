@@ -1,0 +1,269 @@
+// Breakpoints
+$tablet: 768px;
+$pclarge: 992px;
+
+// Colors
+$gray: #EFEFEF;
+$darkgray: #D4D4D4;
+$blue: #3F9692;
+$lightblue: #4CB5B0;
+$darkblue: #0C3D74;
+$pnk: #C61589;
+$orange: #DD4600;
+$linkedin: #166D98;
+$yt: #E41E10;
+$fb: #395EA1;
+$tw: #38A8E3;
+$msg: #4BAD4E;
+
+// Typography
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+// Fonts
+$fontSansPro: 'Source Sans Pro', sans-serif;
+
+a,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+// Boilerplate
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $fontSansPro;
+    font-size: 14px;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+    height: fit-content;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+// PAGE SPECIFIED STYLES
+.arpm-content-container {
+    border-top: 3px solid $gray;
+    @media screen and (min-width: $pclarge) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    // TOC & Search 
+    .arpm-TOC-n-search-container {
+        background-color: $gray;
+        @media screen and (min-width: $pclarge) {
+            width: 20%;
+        }
+
+        // Card buttons TOC & Search
+        .arpm-TOC-n-Search-buttons-container {
+            margin: 10px;
+            border-bottom: 0.5px solid $darkgray;
+            width: 100%;
+            .arpm-TOC-button,
+            .arpm-Search-button {
+                padding: 5px 15px;
+                cursor: pointer;
+                &.arpm-active {
+                    border: 0.5px solid $darkgray;
+                    border-bottom-color: $gray;
+                    margin-bottom: -1px;
+                    border-radius: 3px 3px 0 0;
+                }
+            }
+
+            .arpm-TOC-button {
+                color: $darkblue;
+                font-weight: 600;
+            }
+
+            .arpm-Search-button {
+                color: $lightblue;
+            }
+        }
+
+        // TOC
+        .arpm-TOC-container {
+            overflow-y: auto;
+            max-height: 300px;
+            padding: 0;
+            margin: 10px;
+            width: 100%;
+            &.arpm-close {
+                display: none;
+            }
+            @media screen and (min-width: $pclarge) {
+                max-height: 400px;
+            }
+            .arpm-TOC-content {
+                ul {
+                    list-style-type: none;
+                }
+                ul.arpm-TOC-list {
+                    
+                    ul {
+                        border: 1px solid $darkgray;
+                        border-top: none;
+                        border-right: none;
+                        margin-bottom: 5px;
+                        padding: 0 5px 0 5px;
+                        li {
+                            position: relative;
+                            i {
+                                position: absolute;
+                                top: 3px;
+                                left: 0px;
+                            }
+                            a {
+                                color: #000;
+                                margin-left: 12px;
+                            }
+                        }
+                    }
+                    li {
+                        a {
+                            color: $lightblue;
+                        }
+                        border: none;
+                    }
+                }
+            }
+
+        }
+
+        // Search
+        .arpm-search-container {
+            &.arpm-close {
+                display: none;
+            }
+            margin: 10px;
+            form {
+                input {
+
+                }
+                button {
+                    border-color: $lightblue;
+                    color: #fff;
+                    background-color: $lightblue;
+                    &:hover {
+                        background-color: #fff;
+                        color: $lightblue;
+                    }
+                }
+            }
+        }
+    }
+
+    // Main content
+    .arpm-main-content-container {
+        background-image: url('/images/bg_left_section.png');
+        // background-repeat: no-repeat;
+        margin: 15px 10px;
+        @media screen and (min-width: $pclarge) {
+            width: 80%;
+            margin: 7px 50px;
+        }
+
+        h1 {
+            color: $darkblue;
+            padding: 20px;
+            font-weight: bold;
+        }
+
+        // Topic buttons
+        .arpm-topic-buttons-container {
+            margin: 10px;
+            border-bottom: 0.5px solid $darkgray;
+            width: 100%;
+            .arpm-theory-card-button,
+            .arpm-slides-card-button,
+            .arpm-videomarathon-card-button {
+                padding: 5px 15px;
+                cursor: pointer;
+                &.arpm-active {
+                    border: 0.5px solid $darkgray;
+                    border-bottom-color: #fff;
+                    margin-bottom: -1px;
+                    border-radius: 3px 3px 0 0;
+                }
+            }
+        }
+
+        // Summary
+        .arpm-summary {
+            background-color: #fff;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: fit-content;
+            padding: 20px;
+            @media screen and (min-width: $pclarge) {
+                border: 3px solid $darkgray;
+                flex-direction: row;
+            }
+
+            .arpm-summary-item-container {
+                .arpm-progress-bar {
+                    background-image: linear-gradient(to right, $darkgray, $blue);
+                }
+            }
+
+            // Theory
+            .arpm-theory-container {
+                .arpm-theory {
+
+                }
+            }
+
+            // Slides
+            .arpm-slides-container {
+                .arpm-slides {
+                    
+                }
+            }
+
+            // Video Marathon
+            .arpm-videomarathon-container {
+                .arpm-videomarathon {
+                }
+            }
+
+            // Video Bootcamp
+            .arpm-videobootcamp-container {
+                .arpm-videobootcamp {
+                    
+                }
+            }
+
+            // Doc/Code
+            .arpm-doccode-container {
+                .arpm-doccode {
+                    
+                }
+            }
+        }
+
+    }
+}
